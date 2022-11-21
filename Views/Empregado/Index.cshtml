@@ -1,0 +1,37 @@
+﻿@model AppEmpresa.Models.ViewModel.EmpregadoViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div id="colorForm">
+@using (Html.BeginForm()) 
+{
+   @Html.AntiForgeryToken()
+        <div>
+            <div class="form-group">
+                <label asp-for="Nome" class="col-1"></label>
+                <input asp-for="Nome" class="col-6"/>
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sobrenome" class="col-1"></label>
+                <input asp-for="Sobrenome" class="col-6"/>
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPF_CNPJ" class="col-1"></label>
+                <input asp-for="CPF_CNPJ" class="col-3"/>
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefone" class="col-1"></label>
+                <input asp-for="Telefone" class="col-3"/>
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+        </div>  
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+}
+</div>    
+
+
